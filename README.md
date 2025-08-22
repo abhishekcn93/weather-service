@@ -54,7 +54,7 @@ Spring Boot supports multiple cache backends:
 4) Perfect for local development and small projects, but not ideal for production if you run multiple app instances.
 
 ✅ Setup
-
+```
 @EnableCaching //Enabling caching in application
 @SpringBootApplication
 public class WeatherServiceApplication {
@@ -64,6 +64,7 @@ public class WeatherServiceApplication {
 	}
 
 }
+```
 
 ✅ Common Annotations
 
@@ -75,12 +76,13 @@ public class WeatherServiceApplication {
 
 4) @Caching → Combines multiple caching annotations
 
-Example:
+✅ Example (using in your project)
 
-@Slf4j
+```
 @RequiredArgsConstructor(onConstructor_ = @Autowired)
 @Service
-public class WeatherServiceImpl implements WeatherService {
+public class WeatherServiceImpl implements WeatherService 
+{
 
     final WeatherRepository weatherRepository;
     final CacheManager cacheManager;
@@ -161,5 +163,6 @@ public class WeatherServiceImpl implements WeatherService {
         weatherRepository.deleteAll();
     }
 }
+```
 
 Happy Coding 😎...........
